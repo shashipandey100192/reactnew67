@@ -6,6 +6,8 @@ import { BrowserRouter as Abc, Route, Routes } from 'react-router-dom';
 import  Login from './pages/Login';
 import  Dashboard  from './pages/Dashboard';
 import Mydatalist from './components/Mydatalist';
+import MynewPage from './components/MynewPage';
+
 
 
 
@@ -18,6 +20,7 @@ root.render(
         <Route path='' element={<Login/>}/>
         {/* <Route path='dashboard' element={<Dashboard/>}/> */}
         <Route path='dashboard' element={<Mydatalist/>}/>
+        <Route path="newpage" element={<MynewPage/>}/>
       </Routes>
     </Abc>
   </React.StrictMode>
