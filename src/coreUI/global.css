@@ -42,3 +42,15 @@ ul li a:hover
 {
     font-size:50px;
 }
+.mybox
+{
+    border:1px solid gray;
+}
+
+
+.xyz
+{
+    color:aqua;
+    font-size:50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

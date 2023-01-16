@@ -8,6 +8,7 @@ import  Dashboard  from './pages/Dashboard';
 import Mydatalist from './components/Mydatalist';
 import MynewPage from './components/MynewPage';
 import Fatchdata from './components/Fatchdata';
+import Myprops from './components/Myprops';
 
 
 
@@ -23,6 +24,7 @@ root.render(
         <Route path='dashboard' element={<Mydatalist/>}/>
         <Route path="newpage" element={<MynewPage/>}/>
         <Route path='fetch1' element={<Fatchdata/>}/>
+        <Route path='props' element={<Myprops/>}/>
       </Routes>
     </Abc>
   </React.StrictMode>
