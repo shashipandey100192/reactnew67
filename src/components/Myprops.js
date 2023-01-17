@@ -27,7 +27,7 @@ export const Myfunction = ()=>
 {
     return(
         <>  
-        <h1 className='xyz'>welcome to react propes</h1>
+        <p className='xyz'>welcome to react propes</p>
         </>
     )
 
