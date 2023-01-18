@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import {useForm} from 'react-hook-form';
 
 
@@ -30,25 +30,40 @@ export default MynewPage
 
 
 export const Mynewform = ()=>{
+    const [first,setfirst]=useState('ravi');
+    const [last,setlast]=useState('singh');
+    // const [email,setemail]=useState('email');
+    // const [pass,setpass]=useState('101');
+const firstname = (f)=>
+{
+    setfirst(f.target.value);
+    // console.log(first);
+}
+const lastname = (f)=>
+{
+    setlast(f.target.value);
+    // console.log(f);
+}
 
+const [myf,myfs]=useState(['name','last']);
+const Mysubmits = ()=>
+{
+    myfs({name:first,last:last});
+    console.log(myf);
+}
     
     return(
         <Fragment>
             <form>
             <ul>
-                <li><input type="text" placeholder='firstname' value={a}/></li>
-                <li><input type="text" placeholder='lastname'value={b} /></li>
-                <li><input type="text" placeholder='email' value={c}/></li>
-                <li><input type="text" placeholder='password' value={d}/></li>
-                <li><button type='button'>submit</button></li>
+                <li><input type="text" placeholder='firstname' value={first} onInput={firstname}/></li>
+                <li><input type="text" placeholder='lastname'value={last} onInput={lastname}/></li>
+                {/* <li><input type="email" placeholder='email' value={email} /></li>
+                <li><input type="password" placeholder='password' value={pass}/></li> */}
+                <li><button type='button' onClick={Mysubmits}>submit</button></li>
             </ul>
-
             </form>
-
-
         </Fragment>
-
-
     )
 
 
