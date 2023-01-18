@@ -13,6 +13,8 @@ import Mynav from './components/Mynav';
 import Mychildelement from './components/Mychildelement';
 import Products from './components/Products';
 import  Details  from './components/Details';
+import { Auth0Provider } from '@auth0/auth0-react';
+import Layouts from './components/Layouts';
 
 
 
@@ -21,12 +23,18 @@ import  Details  from './components/Details';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Auth0Provider
+    domain="dev-2lztdozl12hbrfpe.us.auth0.com"
+    clientId="c9M95LgXZzasQkJOxVPo4Jype0v48ebl"
+    redirectUri={window.location.origin}
+    >
     <Abc>
       <Mynav/>
       <Routes>
         <Route path='' element={<Login/>}/>
         {/* <Route path='dashboard' element={<Dashboard/>}/> */}
         <Route path='dashboard' element={<Mydatalist/>}/>
+        <Route path='dashboard/:id' element={<Layouts/>}/>
         <Route path="newpage" element={<MynewPage/>}/>
         <Route path='fetch1' element={<Fatchdata/>}/>
         <Route path='props' element={<Myprops/>}/>
@@ -38,6 +46,7 @@ root.render(
         
       </Routes>
     </Abc>
+    </Auth0Provider>
   </React.StrictMode>
 );
 

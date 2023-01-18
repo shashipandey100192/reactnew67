@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 
 function Mydatalist() {
@@ -15,6 +17,7 @@ const mydata =()=>{
 
 }
 
+const {id} = useParams();
 
 
   return (
@@ -43,7 +46,9 @@ const mydata =()=>{
                             <td>{e.userId}</td>
                             <td>{e.title}</td>
                             <td>{e.body}</td>
-                            <td><button className='btn btn-primary btn-sm'>Action</button></td>
+                            <td><button className='btn btn-primary btn-sm'>Action</button>
+                                <Link to={`${e.id}`} className='btn btn-primary'>{e.id}</Link>
+                            </td>
                         </tr>
                         )
                     })}
