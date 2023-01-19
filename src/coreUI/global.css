@@ -17,3 +17,30 @@
     flex:5;
     border:1px solid gray;
 }
+
+.heading
+{
+    font-size:80px;
+    color:red;
+    transition-duration: 1s;
+}
+.para
+{
+    width:500px;
+    height:auto;
+    padding:20px;
+    color:green;
+    border:2px solid blue;
+}
+.custitle
+{
+    color:orange;
+    text-decoration: underline;
+    text-transform: uppercase;
+    width:800px;
+    border-bottom: 1px solid black;
+}
+.layout
+{
+    background-color:black;
+}

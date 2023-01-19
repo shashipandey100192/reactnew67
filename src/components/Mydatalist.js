@@ -3,6 +3,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import { Mymove } from './Layouts';
 
 
 function Mydatalist() {
@@ -23,6 +24,7 @@ const {id} = useParams();
   return (
     <Fragment>
         <h1>list of data</h1>
+        <button type='button' onClick={Mymove}>alert</button>
     <button type='button' onClick={mydata}>fatch data from api</button>
 
     <div className='container'>
