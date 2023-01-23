@@ -42,7 +42,6 @@ const c = e.clientX;
 console.log(e);
 console.log(c);
 clientfunction(e.clientX);
-
 }
 
 
