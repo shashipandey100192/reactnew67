@@ -21,6 +21,7 @@ function Mynav() {
           <li><Link to="fetch1" className="nav-link px-2 text-white">fatch api</Link></li>
           <li><Link to="props" className="nav-link px-2 text-white">props</Link></li>
           <li><Link to="childrouting" className="nav-link px-2 text-white">Child Routing</Link></li>
+          <li><Link to="context" className="nav-link px-2 text-white">contextapi</Link></li>
          
         </ul>
 

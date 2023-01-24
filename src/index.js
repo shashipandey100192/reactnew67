@@ -15,6 +15,7 @@ import Products from './components/Products';
 import  Details  from './components/Details';
 import { Auth0Provider } from '@auth0/auth0-react';
 import Layouts from './components/Layouts';
+import First from './components/First';
 
 
 
@@ -41,8 +42,8 @@ root.render(
         <Route path='childrouting' element={<Mychildelement/>}>
           <Route path='product' element={<Products/>}/>
           <Route path='detail' element={<Details/>}/>
-
         </Route>
+        <Route path='context' element={<First/>}/>
         
       </Routes>
     </Abc>

@@ -21,6 +21,7 @@ const mysubmit = (data) =>
         <div className='col-6'>
           <label class="form-label">username</label>
           <input type="text" class="form-control" {...register("username",{ required: true, maxLength: 20 })} />
+          
         </div>
         <div className='col-6'>
           <label class="form-label">email</label>
