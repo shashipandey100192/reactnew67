@@ -16,6 +16,9 @@ import  Details  from './components/Details';
 import { Auth0Provider } from '@auth0/auth0-react';
 import Layouts from './components/Layouts';
 import First from './components/First';
+import { Provider } from 'react-redux';
+import { Mystores } from './components/Mystore';
+import Myreduxweb from './components/Myreduxweb';
 
 
 
@@ -24,15 +27,18 @@ import First from './components/First';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+
     <Auth0Provider
     domain="dev-2lztdozl12hbrfpe.us.auth0.com"
     clientId="c9M95LgXZzasQkJOxVPo4Jype0v48ebl"
     redirectUri={window.location.origin}
     >
+      <Provider store={Mystores}>
     <Abc>
       <Mynav/>
       <Routes>
-        <Route path='' element={<Login/>}/>
+        {/* <Route path='' element={<Login/>}/> */}
+          <Route path='' element={<Myreduxweb/>}/>
         {/* <Route path='dashboard' element={<Dashboard/>}/> */}
         <Route path='dashboard' element={<Mydatalist/>}/>
         <Route path='dashboard/:id' element={<Layouts/>}/>
@@ -47,6 +53,7 @@ root.render(
         
       </Routes>
     </Abc>
+    </Provider>
     </Auth0Provider>
   </React.StrictMode>
 );
